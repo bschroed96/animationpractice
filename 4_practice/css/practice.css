@@ -1,0 +1,186 @@
+/* 720x300 or 300x600
+centered
+variable or stacking
+title/ name
+prices
+company
+one image*/
+
+@font-face {
+	font-family: 'Wind';
+	src: url(../fonts/Wind.woff2);
+}
+
+@font-face {
+	font-family: 'Decovar';
+	src: url(../fonts/DecovarAlpha.ttf);
+
+}
+
+html,body {
+	width: 100%;
+	height: 100%;
+	background: lightpink;
+}
+
+
+.adbox {
+	width: 720px;
+	height: 300px;
+	background: skyblue;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	margin-top: -150px;
+	margin-left: -360px;
+	overflow: hidden;
+}
+
+.blow {
+	position: relative;
+	top: 10%;
+	font-family: 'Wind';
+	font-size: 50px;
+	color: black;
+	text-align: center;
+	transition: 1s;
+	animation: wind 1.5s infinite alternate;
+
+}
+
+.pollution {
+	background: url(../images/pollution.jpg);
+	background-size: cover;
+	width: 720px;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: .7s;
+	text-align: center;
+	z-index: 4;
+
+}
+
+h1 {
+	margin-top: 75px;
+	font-size: 72px;
+	color: white;
+	opacity: 1;
+	font-family: Decovar;
+}
+
+.air {
+	background: url(../images/air.jpg);
+	width: 740px;
+	height: 150px;
+	position: relative;
+	background-size: contain;
+	top: 40px;
+	left: -15px;
+}
+
+.sale {
+	width: 400px;
+	height: 400px;
+	color: white;
+	background-color: red;
+	border-radius: 200px;
+	position: relative;
+	left: -150px;
+	top: -10px;
+	z-index: 1;
+
+}
+
+.price {
+	z-index: 2;
+	font-family: helvetica;
+	font-size: 60px;
+	width: 100px;
+	color: white;
+	position: relative;
+	top: -55px;
+	left: 10px;
+}
+
+.info {
+	font-family: helvetica;
+	font-size: 14px;
+	color: black;
+	position: relative;
+	z-index: 0;
+	top: -70px;
+	left: 0px;
+	width: 800px;
+	height: 20px;
+}
+
+.offer {
+	color: white;
+	font-family: helvetica;
+	font-size: 16px;
+	position: relative;
+	top: 60px;
+	left: 0px;
+	text-align: center;
+	line-height: 1.5;
+
+}
+
+.limited {
+	width: 150px;
+	height: 150px;
+	color: white;
+	background-color: black;
+	border-radius: 75px;
+	position: absolute;
+	top: -150px;
+	left: 600px;
+	z-index: 2;
+}
+
+#pol {
+	font-family: Decovar;
+	color: black;
+	animation: deco infinite alternate 1s;
+	opacity: 1;
+}
+
+#down {
+	font-family: Decovar;
+	color: red;
+	animation: down infinite alternate 1s;
+	opacity: 1;
+}
+
+.adbox:hover .blow {
+	font-size: 75px;
+	transition: 1s;
+	transition-delay: 0.3s;
+}
+
+.adbox:hover .pollution {
+	opacity: 0;
+	transition: .7s;
+}
+
+@keyframes deco {
+	0% {font-variation-settings: "BLDA" 0, "WMX2" 0, "SKLB" 0, "TRMK" 0 ;}
+	100% {font-variation-settings: "BLDA" 0, "WMX2" 500, "SKLB" 1000, "TRMK" 0 ;}
+	
+
+}
+
+@keyframes down {
+	0% {font-variation-settings: "BLDA" 0, "SKLA" 0, "WMX2" 0, "TRMK" 0 ;}
+	100% {font-variation-settings: "BLDA" 0, "SKLA" 0, "WMX2" 500, "TRMK" 0 ;}
+	
+
+}
+
+@keyframes wind {
+	0% {font-variation-settings: "WIND" 65;}
+	100% {font-variation-settings: "WIND" 115;}
+}
+
